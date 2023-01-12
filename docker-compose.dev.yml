@@ -1,0 +1,21 @@
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+
+  server:
+    build: ./server
+    ports:
+      - 5050:5000
+    volumes:
+      - ./server/src/:/app/src/
+    command: npm run dev
+
+  client:
+    build: ./client
+    ports:
+      - 8080:3000
+    volumes:
+      - ./client/src:/app/src
+    command: npm run start
