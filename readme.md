@@ -1,4 +1,4 @@
-# To launch the application in development mode, run the command :
+### To launch the application in development mode, run the command :
 
 ---
 
